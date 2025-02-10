@@ -20,7 +20,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -47,7 +46,10 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
+//@Composable
+//fun ProfileCard(){
+//    //add for when I learn how to add a background color
+//}
 @Composable
 fun ProfileBio(image: Painter, name: String, bio: String){
     Column(
@@ -70,7 +72,8 @@ fun ProfileBio(image: Painter, name: String, bio: String){
             text = bio,
             fontSize = 10.sp,
             lineHeight = 5.sp,
-            textAlign = TextAlign.End
+            modifier = Modifier.padding(3.dp)
+                .align(alignment = Alignment.End)
         )
     }
 }
